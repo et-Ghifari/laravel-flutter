@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    @include('components.head')
-</head>
-
-<body class="signup-page">
+@extends('layouts.auth')
+@section('title', 'Sign Up')
+@push('class')
+    class="signup-page"
+@endpush
+@section('auth')
     <div class="signup-box">
         <div class="logo">
             <a href="javascript:void(0);">Sign <b>Up</b></a>
@@ -29,8 +27,7 @@
                             <i class="material-icons">email</i>
                         </span>
                         <div class="form-line">
-                            <input type="email" class="form-control" name="email" placeholder="Email Address"
-                                required>
+                            <input type="email" class="form-control" name="email" placeholder="Email Address" required>
                         </div>
                     </div>
                     <div class="input-group">
@@ -66,8 +63,9 @@
             </div>
         </div>
     </div>
-
-    @include('components.foot')
-</body>
-
-</html>
+@endsection
+@push('scrypt')
+    <!-- Validation Plugin Js -->
+    <script src="{{ asset('assets/plugins/jquery-validation/jquery.validate.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/examples/sign-up.js') }}"></script>
+@endpush

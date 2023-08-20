@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    @include('components.head')
-</head>
-
-<body class="fp-page">
+@extends('layouts.auth')
+@section('title', 'Sign Link')
+@push('class')
+    class="fp-page"
+@endpush
+@section('auth')
     <div class="fp-box">
         <div class="logo">
             <a href="javascript:void(0);">Verification <b>Email</b></a>
@@ -23,8 +21,9 @@
             </div>
         </div>
     </div>
-
-    @include('components.foot')
-</body>
-
-</html>
+@endsection
+@push('scrypt')
+    <!-- Validation Plugin Js -->
+    <script src="{{ asset('assets/plugins/jquery-validation/jquery.validate.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/examples/forgot-password.js') }}"></script>
+@endpush

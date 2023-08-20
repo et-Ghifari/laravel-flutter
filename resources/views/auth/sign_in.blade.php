@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    @include('components.head')
-</head>
-
-<body class="login-page">
+@extends('layouts.auth')
+@section('title', 'Sign In')
+@push('class')
+    class="login-page"
+@endpush
+@section('auth')
     <div class="login-box">
         <div class="logo">
             <a href="javascript:void(0);">Sign <b>In</b></a>
@@ -53,8 +51,9 @@
             </div>
         </div>
     </div>
-
-    @include('components.foot')
-</body>
-
-</html>
+@endsection
+@push('scrypt')
+    <!-- Validation Plugin Js -->
+    <script src="{{ asset('assets/plugins/jquery-validation/jquery.validate.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/examples/sign-in.js') }}"></script>
+@endpush

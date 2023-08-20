@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    @include('components.head')
-</head>
-
-<body class="five-zero-zero">
+@extends('layouts.error')
+@section('error')
     <div class="five-zero-zero-container">
         <div class="error-code">
             <img src="{{ asset('assets/images/maintenance.png') }}" height="200">
@@ -15,8 +9,4 @@
         <br>
         <div class="error-message">Internal Server Maintenance</div>
     </div>
-
-    @include('components.foot')
-</body>
-
-</html>
+@endsection

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>@yield('title') &mdash; Flutter</title>
     @include('components.head')
 </head>
 

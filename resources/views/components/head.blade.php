@@ -1,6 +1,5 @@
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>Admin | Laravel - Flutter</title>
 <!-- Favicon-->
 <link rel="icon" href="{{ asset('assets/etg.png') }}" type="image/x-icon">
 
@@ -17,9 +16,6 @@
 
 <!-- Animation Css -->
 <link href="{{ asset('assets/plugins/animate-css/animate.css') }}" rel="stylesheet" />
-
-<!-- Sweetalert Css -->
-<link href="{{ asset('assets/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet" />
 
 <!-- Custom Css -->
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">

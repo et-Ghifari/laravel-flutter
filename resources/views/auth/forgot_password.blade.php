@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    @include('components.head')
-</head>
-
-<body class="fp-page">
+@extends('layouts.auth')
+@section('title', 'Forgot Password')
+@push('class')
+    class="fp-page"
+@endpush
+@section('auth')
     <div class="fp-box">
         <div class="logo">
             <a href="javascript:void(0);">Forgot <b>Password</b></a>
@@ -13,7 +11,7 @@
         </div>
         <div class="card">
             <div class="body">
-                <form id="forgot_password" action="{{ url('/sign_link') }}" target="_blank">
+                <form id="forgot_password" action="{{ url('/sign_link') }}">
                     <div class="msg">
                         Enter your email address that you used to register. We'll send you an email
                         link to reset your password.
@@ -37,8 +35,9 @@
             </div>
         </div>
     </div>
-
-    @include('components.foot')
-</body>
-
-</html>
+@endsection
+@push('scrypt')
+    <!-- Validation Plugin Js -->
+    <script src="{{ asset('assets/plugins/jquery-validation/jquery.validate.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/examples/forgot-password.js') }}"></script>
+@endpush
